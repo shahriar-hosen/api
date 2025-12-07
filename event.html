@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li onclick="itemClicked(event)">My Items</li>
+        <li>Unde, rem?</li>
+        <li>Id, similique?</li>
+        <li onclick="this.innerText='Someone Clicked'">Facere, alias!</li>
+        <li id="last-item">Reiciendis, sint.</li>
+    </ul>
+
+</body>
+<script>
+    function itemClicked(event) {
+        console.log(event.target.innerText)
+    }
+    const lastItem = document.getElementById('last-item')
+    lastItem.addEventListener('click', itemClicked)
+</script>
+</html>
